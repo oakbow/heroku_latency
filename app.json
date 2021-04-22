@@ -1,5 +1,15 @@
 {
   "name": "heroku latency",
   "description": "You are able to check latency between your localtion and heroku region(us, eu and so on...)",
-  "repository": "https://github.com/oakbow/heroku_latency",  
+  "repository": "https://github.com/oakbow/heroku_latency",
+  "env": { "WEB_CONCURRENCY": {
+    "values": 1
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
+  "image": "heroku/ruby"
 }
